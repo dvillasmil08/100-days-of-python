@@ -1,26 +1,13 @@
-# two_digit_number = input("Type a two-digit number: ")
-#
-# first_digit = int(two_digit_number[0])
-# second_digit = int(two_digit_number[1])
-#
-# result = first_digit + second_digit
-# print(result)
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+tip = int(input("How much tip would you want to give? 10, 12, or 15? "))
+people = int(input("How many people to split the bill? "))
 
-# Mathematical Operations in Python
-# 3 + 5  Addition
-# 7 - 4  Subtraction
-# 3 * 2  Multiplication
-# 6 / 3  Division
-# 2 ** 3  Exponent
+tip_as_percent = tip / 100
+total_tip_amount = bill * tip_as_percent
+total_bill = bill + total_tip_amount
+bill_per_person = total_bill / people
+final_bill = print(f"{bill_per_person:.2f}")
 
-# PEMDASLR
-# Left to Right
-# ()
-# **
-# * /
-# + -
-
-# print(3 * 3 + 3 / 3 - 3)  # 7.0
-# print(3 * (3 + 3) / 3 - 3)  # 3.0
-
+print(f"Each person should pay: $")
 
