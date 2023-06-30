@@ -87,22 +87,25 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+gestures = [rock, paper, scissors]
+
 user_input = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-
-# computer random gesture
-computer_gesture = random.randint(0, 2)
-print(f"Computer chose {computer_gesture}")
-
 if user_input >= 3 or user_input < 0:
     print("You typed an invalid number, you lose!")
-elif user_input == 0 and computer_gesture == 2:
-    print("You win!")
-elif computer_gesture == 0 and user_input == 2:
-    print("You lose")
-elif computer_gesture > user_input:
-    print("You lose")
-elif user_input > computer_gesture:
-    print("You win!")
-elif computer_gesture == user_input:
-    print("Its a draw")
+else:
+    print(gestures[user_input])
 
+    computer_gesture = random.randint(0, 2)
+    print(f"Computer chose:")
+    print(gestures[computer_gesture])
+
+    if user_input == 0 and computer_gesture == 2:
+        print("You win!")
+    elif computer_gesture == 0 and user_input == 2:
+        print("You lose")
+    elif computer_gesture > user_input:
+        print("You lose")
+    elif user_input > computer_gesture:
+        print("You win!")
+    elif computer_gesture == user_input:
+        print("Its a draw")
