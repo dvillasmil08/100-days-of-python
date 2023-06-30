@@ -10,15 +10,17 @@
 # List
 # fruits = [item1, item2]
 
-# Import the random module here
 import random
-
+#
 names_string = input("Give me everybody's names, separated by a comma. ")
 names = names_string.split(", ")
-
-# Total items in list
+#
+# # Total items in list
 num_items = len(names)
+#
+# random_choice = random.randint(0, num_items - 1)
+# person_to_pay = names[random_choice]
 
-random_choice = random.randint(0, num_items - 1)
-person_to_pay = names[random_choice]
+# With random.choice
+person_to_pay = random.choice(names)
 print(person_to_pay + " is going to buy the meal today.")
