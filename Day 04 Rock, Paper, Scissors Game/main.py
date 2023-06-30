@@ -1,8 +1,8 @@
 import random
 
-dice_face = random.randint(0, 1)
+coin_flip = random.randint(0, 1)
 
-if dice_face == 1:
+if coin_flip == 1:
     print("Heads")
 else:
     print("Tails")
