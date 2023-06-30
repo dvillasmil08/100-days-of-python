@@ -1,10 +1,8 @@
 import random
 
-random_integer = random.randint(1, 10)
-print(random_integer)
+dice_face = random.randint(0, 1)
 
-random_float = random.random() * 5
-print(random_float)
-
-love_score = random.randint(1, 100)
-print(f"Your love  sore is {love_score}")
+if dice_face == 1:
+    print("Heads")
+else:
+    print("Tails")
